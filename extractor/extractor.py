@@ -26,7 +26,7 @@ def extract(img, outname):
                 if chunk.type == 1:
                     data = bz2.decompress(data)
                 elif chunk.type == 0:
-                    pass
+                    print("offset:{}".format(dst_offset))
                 else:
                     raise "Unsupported type " + chunk.type
 
